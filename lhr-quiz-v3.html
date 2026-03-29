@@ -1,0 +1,1789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laser Hair Removal in Seattle | Find a Clinic & See Pricing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0A0A0A;
+    --off-black: #1A1A1A;
+    --white: #FFFFFF;
+    --light-gray: #F5F5F5;
+    --mid-gray: #E0E0E0;
+    --text-gray: #666666;
+    --accent: #C17B5C;
+    --accent-dark: #9E5E40;
+    --accent-light: #F0DDD4;
+    --success: #2D6A4F;
+    --success-light: #D8F3DC;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Nunito Sans', sans-serif;
+    background: var(--white);
+    color: var(--black);
+    min-height: 100vh;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+  }
+
+  .hero-left {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+
+  .hero-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 64px;
+    background: var(--white);
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 24px;
+  }
+
+  .hero-h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(52px, 6vw, 90px);
+    line-height: 0.95;
+    color: var(--black);
+    letter-spacing: 0.02em;
+    margin-bottom: 28px;
+  }
+
+  .hero-h1 span { color: var(--accent); }
+
+  .hero-p {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--text-gray);
+    line-height: 1.75;
+    max-width: 380px;
+    margin-bottom: 40px;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--black);
+    color: var(--white);
+    padding: 18px 40px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border: 2px solid var(--black);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-decoration: none;
+  }
+
+  .btn-primary:hover { background: var(--white); color: var(--black); }
+  .btn-primary svg { transition: transform 0.25s ease; }
+  .btn-primary:hover svg { transform: translateX(4px); }
+
+  .hero-trust {
+    display: flex;
+    gap: 32px;
+    margin-top: 48px;
+    padding-top: 40px;
+    border-top: 1px solid var(--mid-gray);
+  }
+
+  .trust-stat strong {
+    display: block;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    color: var(--black);
+    letter-spacing: 0.02em;
+    line-height: 1;
+  }
+
+  .trust-stat span {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-gray);
+  }
+
+  /* ── IMAGE STRIP ── */
+  .image-strip {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 320px;
+  }
+
+  .image-strip-item {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .image-strip-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+
+  .image-strip-item:hover img { transform: scale(1.04); }
+
+  .strip-label {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: var(--white);
+    padding: 6px 14px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--black);
+  }
+
+  /* ── QUIZ ── */
+  .quiz-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 100px 40px;
+  }
+
+  .quiz-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: end;
+    margin-bottom: 72px;
+    padding-bottom: 48px;
+    border-bottom: 2px solid var(--black);
+  }
+
+  .quiz-intro-left h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(44px, 5vw, 68px);
+    line-height: 0.95;
+    letter-spacing: 0.02em;
+  }
+
+  .quiz-intro-left h2 span { color: var(--accent); }
+
+  .quiz-intro-right p {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--text-gray);
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  .quiz-intro-right p strong { color: var(--black); font-weight: 700; }
+
+  /* ── PROGRESS ── */
+  .progress-wrap { display: none; margin-bottom: 48px; }
+  .progress-wrap.visible { display: block; }
+
+  .progress-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .progress-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-gray);
+  }
+
+  .progress-pct {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+  }
+
+  .progress-bar { height: 3px; background: var(--mid-gray); }
+  .progress-fill {
+    height: 100%;
+    background: var(--black);
+    transition: width 0.5s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  /* ── STEPS ── */
+  .step { display: none; }
+  .step.active { display: block; animation: fadeUp 0.35s ease forwards; }
+
+  .step-q {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(28px, 3.5vw, 42px);
+    letter-spacing: 0.02em;
+    color: var(--black);
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+
+  .step-hint {
+    font-size: 13px;
+    color: var(--text-gray);
+    margin-bottom: 32px;
+    line-height: 1.6;
+  }
+
+  /* ZIP INPUT */
+  .zip-input-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 260px;
+  }
+
+  .zip-input-wrap label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--black);
+  }
+
+  .zip-input {
+    padding: 16px 20px;
+    border: 2px solid var(--mid-gray);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    letter-spacing: 0.1em;
+    color: var(--black);
+    background: var(--white);
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+
+  .zip-input:focus { border-color: var(--black); }
+  .zip-input::placeholder { color: var(--mid-gray); }
+
+  /* OPTION CARDS */
+  .options-grid { display: grid; gap: 10px; }
+
+  .option-card {
+    border: 2px solid var(--mid-gray);
+    padding: 20px 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--white);
+    transition: all 0.2s ease;
+  }
+
+  .option-card:hover { border-color: var(--black); background: var(--light-gray); }
+
+  .option-card.selected {
+    border-color: var(--black);
+    background: var(--black);
+  }
+
+  .option-card.selected .opt-main { color: var(--white); }
+  .option-card.selected .opt-indicator { background: var(--accent); border-color: var(--accent); }
+
+  .opt-main {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--black);
+  }
+
+  .opt-indicator {
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--mid-gray);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-left: 20px;
+    position: relative;
+    transition: all 0.2s ease;
+  }
+
+  .opt-indicator::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--white);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .option-card.selected .opt-indicator::after { opacity: 1; }
+
+  /* AREA GRID */
+  .area-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .area-card {
+    border: 2px solid var(--mid-gray);
+    padding: 20px 16px;
+    cursor: pointer;
+    text-align: left;
+    background: var(--white);
+    transition: all 0.2s ease;
+    position: relative;
+  }
+
+  .area-card:hover { border-color: var(--black); background: var(--light-gray); }
+
+  .area-card.selected {
+    border-color: var(--black);
+    background: var(--black);
+  }
+
+  .area-card.selected .area-name { color: var(--white); }
+  .area-card.selected .area-sub { color: rgba(255,255,255,0.5); }
+
+  .area-check {
+    position: absolute;
+    top: 12px; right: 12px;
+    width: 18px; height: 18px;
+    border: 2px solid var(--mid-gray);
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+
+  .area-card.selected .area-check { background: var(--accent); border-color: var(--accent); }
+  .area-check svg { display: none; }
+  .area-card.selected .area-check svg { display: block; }
+
+  .area-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--black);
+    letter-spacing: 0.03em;
+    display: block;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+  }
+
+  .area-sub { font-size: 11px; color: var(--text-gray); }
+
+  .multi-note {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  /* NAV */
+  .step-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--mid-gray);
+  }
+
+  .btn-back {
+    background: none;
+    border: none;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-gray);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    transition: color 0.2s;
+  }
+
+  .btn-back:hover { color: var(--black); }
+
+  .btn-next {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--black);
+    color: var(--white);
+    padding: 16px 36px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border: 2px solid var(--black);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .btn-next:hover:not(:disabled) { background: var(--white); color: var(--black); }
+  .btn-next:disabled {
+    background: var(--mid-gray);
+    border-color: var(--mid-gray);
+    color: var(--text-gray);
+    cursor: not-allowed;
+  }
+
+  /* DISQUALIFY */
+  .disq-screen { display: none; padding: 60px 0; animation: fadeUp 0.35s ease forwards; }
+  .disq-screen.active { display: block; }
+
+  .disq-tag {
+    display: inline-block;
+    background: var(--light-gray);
+    padding: 8px 16px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text-gray);
+    margin-bottom: 24px;
+  }
+
+  .disq-screen h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 4vw, 54px);
+    letter-spacing: 0.02em;
+    line-height: 1.05;
+    color: var(--black);
+    margin-bottom: 20px;
+    max-width: 580px;
+  }
+
+  .disq-screen p {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--text-gray);
+    line-height: 1.8;
+    max-width: 520px;
+    margin-bottom: 36px;
+  }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--white);
+    color: var(--black);
+    padding: 16px 32px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border: 2px solid var(--black);
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    margin-right: 12px;
+    margin-bottom: 12px;
+  }
+
+  .btn-outline:hover { background: var(--black); color: var(--white); }
+
+  /* ── TEASER RESULT (pre-gate) ── */
+  .teaser-screen { display: none; animation: fadeUp 0.35s ease forwards; }
+  .teaser-screen.active { display: block; }
+
+  .teaser-header {
+    background: var(--black);
+    padding: 40px;
+    margin-bottom: 0;
+  }
+
+  .teaser-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--success-light);
+    color: var(--success);
+    padding: 6px 14px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .teaser-header h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 4vw, 56px);
+    letter-spacing: 0.02em;
+    line-height: 1.0;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+
+  .teaser-header h3 span { color: var(--accent); }
+
+  .teaser-header p {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+  }
+
+  /* STATS */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    border-top: 2px solid var(--black);
+    border-left: 2px solid var(--black);
+    margin-bottom: 40px;
+  }
+
+  .stat-box {
+    border-right: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
+    padding: 24px;
+  }
+
+  .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 44px;
+    letter-spacing: 0.02em;
+    color: var(--accent);
+    line-height: 1;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .stat-lbl {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-gray);
+  }
+
+  /* PRICING GATE */
+  .pricing-gate-wrap {
+    border: 2px solid var(--black);
+    margin-bottom: 32px;
+    overflow: hidden;
+  }
+
+  .pricing-gate-head {
+    background: var(--light-gray);
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--mid-gray);
+  }
+
+  .pricing-gate-head span {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text-gray);
+  }
+
+  .lock-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--black);
+    color: var(--white);
+    padding: 5px 12px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  /* BLURRED PRICING ROWS */
+  .pricing-rows-locked { padding: 0; }
+
+  .price-row-locked {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--mid-gray);
+  }
+
+  .price-row-locked:last-child { border-bottom: none; }
+
+  .pr-area-name {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--black);
+  }
+
+  .pr-blurred {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    letter-spacing: 0.05em;
+    color: var(--black);
+    filter: blur(6px);
+    user-select: none;
+    transition: filter 0.6s ease;
+  }
+
+  .pr-blurred.revealed { filter: blur(0); color: var(--accent); }
+
+  .price-row-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px;
+    background: var(--black);
+  }
+
+  .pr-total-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+
+  .pr-total-value {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    letter-spacing: 0.05em;
+    color: var(--white);
+    filter: blur(8px);
+    user-select: none;
+    transition: filter 0.8s ease 0.3s;
+  }
+
+  .pr-total-value.revealed { filter: blur(0); color: var(--accent); }
+
+  /* GATE CTA */
+  .gate-cta {
+    background: var(--accent-light);
+    border: 2px solid var(--accent);
+    padding: 28px 32px;
+    margin-bottom: 0;
+  }
+
+  .gate-cta-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .gate-lock-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .gate-cta h4 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    letter-spacing: 0.02em;
+    color: var(--black);
+    line-height: 1.1;
+    margin-bottom: 6px;
+  }
+
+  .gate-cta p {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--text-gray);
+    line-height: 1.6;
+  }
+
+  /* GATE FORM */
+  .gate-form { display: flex; flex-direction: column; gap: 12px; }
+
+  .gate-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+  .gate-input-group { display: flex; flex-direction: column; gap: 6px; }
+
+  .gate-input-group label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--black);
+  }
+
+  .gate-input-group input {
+    padding: 13px 16px;
+    border: 2px solid var(--mid-gray);
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    color: var(--black);
+    background: var(--white);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .gate-input-group input:focus { border-color: var(--black); }
+  .gate-input-group input::placeholder { color: #bbb; }
+
+  .privacy-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 11px;
+    color: var(--text-gray);
+    line-height: 1.5;
+    margin-top: 4px;
+  }
+
+  .privacy-row svg { flex-shrink: 0; margin-top: 1px; color: var(--success); }
+
+  .field-error {
+    font-size: 11px;
+    font-weight: 600;
+    color: #C0392B;
+    letter-spacing: 0.03em;
+    margin-top: 4px;
+    display: none;
+  }
+
+  .field-error.visible { display: block; }
+
+  .gate-input-group input.invalid { border-color: #C0392B; }
+
+  .btn-unlock {
+    width: 100%;
+    background: var(--black);
+    color: var(--white);
+    padding: 18px 40px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border: 2px solid var(--black);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: all 0.2s;
+    margin-top: 4px;
+  }
+
+  .btn-unlock:hover { background: var(--accent); border-color: var(--accent); }
+
+  /* SAVINGS BAR */
+  .savings-bar {
+    background: var(--accent-light);
+    border: 2px solid var(--accent);
+    border-top: none;
+    padding: 14px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent-dark);
+    display: none;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+
+  /* POST-UNLOCK CTA */
+  .post-unlock { display: none; margin-top: 32px; }
+  .post-unlock.visible { display: block; animation: fadeUp 0.4s ease forwards; }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text-gray);
+    margin-bottom: 20px;
+  }
+
+  .expect-list {
+    border-top: 1px solid var(--mid-gray);
+    margin-bottom: 40px;
+  }
+
+  .expect-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--mid-gray);
+    font-size: 14px;
+    color: var(--black);
+    line-height: 1.6;
+  }
+
+  .expect-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+    width: 28px;
+  }
+
+  .cta-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--black);
+    min-height: 260px;
+  }
+
+  .cta-block-img { overflow: hidden; }
+  .cta-block-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
+    filter: brightness(0.7);
+  }
+
+  .cta-block-text {
+    padding: 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .cta-block-text h4 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 38px;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    line-height: 1.05;
+    margin-bottom: 12px;
+  }
+
+  .cta-block-text p {
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .btn-accent {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--accent);
+    color: var(--white);
+    padding: 16px 32px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border: 2px solid var(--accent);
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+    width: fit-content;
+  }
+
+  .btn-accent:hover { background: var(--white); color: var(--black); border-color: var(--white); }
+
+  .result-disclaimer {
+    text-align: center;
+    font-size: 11px;
+    color: var(--text-gray);
+    line-height: 1.6;
+    padding: 24px 40px;
+    border-top: 1px solid var(--mid-gray);
+    margin-top: 0;
+  }
+
+  .result-disclaimer a { color: var(--accent); text-decoration: none; }
+
+  /* FOOTER */
+  footer {
+    background: var(--off-black);
+    padding: 48px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .footer-brand {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 0.1em;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  footer p { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.45); line-height: 1.7; }
+  footer a { color: var(--accent); text-decoration: none; }
+  .footer-right { text-align: right; font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.7; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero-left { height: 50vh; min-height: 300px; }
+    .hero-right { padding: 48px 28px; }
+    .hero-trust { gap: 20px; }
+    .image-strip { grid-template-columns: 1fr; height: auto; }
+    .image-strip-item { height: 220px; }
+    .quiz-wrapper { padding: 60px 24px; }
+    .quiz-intro { grid-template-columns: 1fr; gap: 24px; margin-bottom: 48px; }
+    .area-grid { grid-template-columns: 1fr 1fr; }
+    .stats-row { grid-template-columns: 1fr 1fr; }
+    .gate-form-row { grid-template-columns: 1fr; }
+    .cta-block { grid-template-columns: 1fr; }
+    .cta-block-img { height: 200px; }
+    footer { grid-template-columns: 1fr; }
+    .footer-right { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <img src="hero2.jpg" alt="Laser hair removal treatment" />
+  </div>
+  <div class="hero-right">
+    <p class="hero-eyebrow">Seattle Hair Removal</p>
+    <h1 class="hero-h1">Stop<br>Shaving.<br><span>Start Living.</span></h1>
+    <p class="hero-p">Take a short quiz to find out if laser hair removal is right for you.</p>
+    <button class="btn-primary" onclick="document.querySelector('.quiz-wrapper').scrollIntoView({behavior:'smooth'})">
+      Find Out If It's Right for You
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+    <div class="hero-trust">
+      <div class="trust-stat"><strong>FDA</strong><span>Approved Tech</span></div>
+      <div class="trust-stat"><strong>All</strong><span>Skin Tones Welcome</span></div>
+      <div class="trust-stat"><strong>Free</strong><span>Consultation</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- IMAGE STRIP -->
+<div class="image-strip">
+  <div class="image-strip-item">
+    <img src="hero.jpg" alt="Laser treatment" />
+    <div class="strip-label">Laser Hair Removal</div>
+  </div>
+  <div class="image-strip-item">
+    <img src="portrait.jpg" alt="Confident woman" />
+    <div class="strip-label">All Skin Tones</div>
+  </div>
+  <div class="image-strip-item">
+    <img src="treatment.jpg" alt="Professional treatment" />
+    <div class="strip-label">Clinical Precision</div>
+  </div>
+</div>
+
+<!-- QUIZ -->
+<div class="quiz-wrapper">
+
+  <div class="quiz-intro" id="quizIntro">
+    <div class="quiz-intro-left">
+      <h2>IS LASER<br>HAIR REMOVAL<br><span>RIGHT FOR YOU?</span></h2>
+    </div>
+    <div class="quiz-intro-right">
+      <p>Take a short quiz to find out if laser hair removal is a good fit for you — no commitment, no pressure.</p>
+      <p>We'll walk you through a few quick questions and give you a straight answer.</p>
+      <button class="btn-primary" onclick="startQuiz()" style="margin-top:8px">
+        Take the Quiz
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- PROGRESS -->
+  <div class="progress-wrap" id="progressWrap">
+    <div class="progress-top">
+      <span class="progress-label" id="stepLabel">Step 1 of 9</span>
+      <span class="progress-pct" id="stepPct">11%</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:11%"></div></div>
+  </div>
+
+  <!-- STEP 1: ZIP -->
+  <div class="step" id="step1">
+    <p class="step-q">What's your ZIP code?</p>
+    <p class="step-hint">We use this to match you with the nearest available clinic.</p>
+    <div class="zip-input-wrap">
+      <label>ZIP Code</label>
+      <input type="text" class="zip-input" id="zipInput" placeholder="98101" maxlength="5"
+        oninput="handleZip(this.value)" inputmode="numeric" pattern="[0-9]*" />
+      <div id="zipError" style="display:none;color:#C0392B;font-size:12px;font-weight:600;letter-spacing:0.05em;margin-top:6px;"></div>
+    </div>
+    <div class="step-nav">
+      <span></span>
+      <button class="btn-next" id="next1" disabled onclick="nextStep(1)">
+        Continue
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- STEP 2: Travel Time -->
+  <div class="step" id="step2">
+    <p class="step-q">How far are you willing to drive for treatment?</p>
+    <p class="step-hint">This helps us find the right clinic for your location.</p>
+    <div class="options-grid">
+      <div class="option-card" onclick="selectOpt(this,'travel','10min',2)">
+        <span class="opt-main">Under 10 minutes</span>
+        <div class="opt-indicator"></div>
+      </div>
+      <div class="option-card" onclick="selectOpt(this,'travel','20min',2)">
+        <span class="opt-main">Up to 20 minutes</span>
+        <div class="opt-indicator"></div>
+      </div>
+      <div class="option-card" onclick="selectOpt(this,'travel','30min',2)">
+        <span class="opt-main">Up to 30 minutes</span>
+        <div class="opt-indicator"></div>
+      </div>
+      <div class="option-card" onclick="selectOpt(this,'travel','anywhere',2)">
+        <span class="opt-main">I'll drive as far as needed for the right clinic</span>
+        <div class="opt-indicator"></div>
+      </div>
+    </div>
+    <div class="step-nav">
+      <button class="btn-back" onclick="goBack(2)">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back
+      </button>
+      <button class="btn-next" id="next2" disabled onclick="nextStep(2)">
+        Continue
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- STEP 3: Hair Color -->
+  <div class="step" id="step3">
+    <p class="step-q">What is your natural hair color in the area you want treated?</p>
+    <p class="step-hint">The laser targets dark pigment in the hair follicle.</p>
+    <div class="options-grid">
+      <div class="option-card" onclick="selectOpt(this,'hairColor','black',3)">
+        <span class="opt-main">Black</span>
+        <div class="opt-indicator"></div>
+      </div>
+      <div class="option-card" onclick="selectOpt(this,'hairColor','dark_brown',3)">
+        <span class="opt-main">Dark Brown</span>
+        <div class="opt-indicator"></div>
+      </div>
+      <div class="option-card" onclick="selectOpt(this,'hairColor','medium_brown',3)">
+        <span class="opt-main">Medium Brown</span>
+        <div class="opt-indicator"></div>
+      </div>
+      <div class="option-card" onclick="selectOpt(this,'hairColor','light',3,true)">
+        <span class="opt-main">Blonde, Red, Gray, or White</span>
+        <div class="opt-indicator"></div>
+      </div>
+    </div>
+    <div class="step-nav">
+      <button class="btn-back" onclick="goBack(3)">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back
+      </button>
+      <button class="btn-next" id="next3" disabled onclick="nextStep(3)">
+        Continue
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- STEP 4: Areas -->
+  <div class="step" id="step4">
+    <p class="step-q">Which areas would you like treated?</p>
+    <p class="step-hint">Select all that apply.</p>
+    <p class="multi-note">Select multiple areas to unlock bundle pricing</p>
+    <div class="area-grid" style="grid-template-columns: repeat(2,1fr);">
+      <div class="area-card" onclick="toggleArea(this,'face_neck',1100,975,875)">
+        <div class="area-check"><svg width="10" height="10" fill="none" stroke="white" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></div>
+        <strong class="area-name">Face & Neck</strong>
+        <span class="area-sub">Full face, lip, chin, neckline</span>
+      </div>
+      <div class="area-card" onclick="toggleArea(this,'arms',1375,1225,1100)">
+        <div class="area-check"><svg width="10" height="10" fill="none" stroke="white" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></div>
+        <strong class="area-name">Arms</strong>
+        <span class="area-sub">Full arms, upper and lower</span>
+      </div>
+      <div class="area-card" onclick="toggleArea(this,'midsection',1150,1050,925)">
+        <div class="area-check"><svg width="10" height="10" fill="none" stroke="white" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></div>
+        <strong class="area-name">Midsection</strong>
+        <span class="area-sub">Abdomen, stomach, happy trail</span>
+      </div>
+      <div class="area-card" onclick="toggleArea(this,'back',1650,1475,1325)">
+        <div class="area-check"><svg width="10" height="10" fill="none" stroke="white" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></div>
+        <strong class="area-name">Back</strong>
+        <span class="area-sub">Full back, upper and lower</span>
+      </div>
+      <div class="area-card" onclick="toggleArea(this,'bikini',975,875,775)">
+        <div class="area-check"><svg width="10" height="10" fill="none" stroke="white" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></div>
+        <strong class="area-name">Bikini</strong>
+        <span class="area-sub">Bikini line, full bikini, or Brazilian</span>
+      </div>
+      <div class="area-card" onclick="toggleArea(this,'legs',2475,2225,1975)">
+        <div class="area-check"><svg width="10" height="10" fill="none" stroke="white" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></div>
+        <strong class="area-name">Legs</strong>
+        <span class="area-sub">Full legs, upper or lower</span>
+      </div>
+    </div>
+    <div class="step-nav">
+      <button class="btn-back" onclick="goBack(4)">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back
+      </button>
+      <button class="btn-next" id="next4" disabled onclick="nextStep(4)">
+        Continue
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- STEP 5: Method -->
+  <div class="step" id="step5">
+    <p class="step-q">How are you currently removing hair in that area?</p>
+    <p class="step-hint">Select your current method.</p>
+    <div class="options-grid">
+      <div class="option-card" onclick="selectOpt(this,'method','shaving',5)">
+        <span class="opt-main">Shaving</span>
+        <div class="opt-indicator"></div>
+      </div>
+      <div class="option-card" onclick="selectOpt(this,'method','waxing',5)">
+        <span class="opt-main">Waxing or Threading</span>
+        <div class="opt-indicator"></div>
+      </div>
+      <div class="option-card" onclick="selectOpt(this,'method','nothing',5)">
+        <span class="opt-main">Nothing / Natural</span>
+        <div class="opt-indicator"></div>
+      </div>
+      <div class="option-card" onclick="selectOpt(this,'method','depilatory',5)">
+        <span class="opt-main">Depilatory Cream</span>
+        <div class="opt-indicator"></div>
+      </div>
+    </div>
+    <div class="step-nav">
+      <button class="btn-back" onclick="goBack(5)">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back
+      </button>
+      <button class="btn-next" id="next5" disabled onclick="nextStep(5)">
+        Continue
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- STEP 6: Sun -->
+  <div class="step" id="step6">
+    <p class="step-q">Any significant sun exposure or tanning in the last 4 weeks?</p>
+    <p class="step-hint">Select the option that best describes your recent sun exposure.</p>
+    <div class="options-grid">
+      <div class="option-card" onclick="selectOpt(this,'sun','no',6)">
+        <span class="opt-main">No significant sun exposure</span>
+        <div class="opt-indicator"></div>
+      </div>
+      <div class="option-card" onclick="selectOpt(this,'sun','some',6)">
+        <span class="opt-main">Some sun, nothing extreme</span>
+        <div class="opt-indicator"></div>
+      </div>
+      <div class="option-card" onclick="selectOpt(this,'sun','tanned',6)">
+        <span class="opt-main">Yes, noticeably tanned</span>
+        <div class="opt-indicator"></div>
+      </div>
+    </div>
+    <div class="step-nav">
+      <button class="btn-back" onclick="goBack(6)">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back
+      </button>
+      <button class="btn-next" id="next6" disabled onclick="nextStep(6)">
+        Continue
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- STEP 7: Medical -->
+  <div class="step" id="step7">
+    <p class="step-q">Are any of the following currently true for you?</p>
+    <p class="step-hint">Check any that currently apply.</p>
+    <div class="options-grid">
+      <div class="option-card" onclick="selectOpt(this,'medical','none',7)">
+        <span class="opt-main">None of these apply</span>
+        <div class="opt-indicator"></div>
+      </div>
+      <div class="option-card" onclick="selectOpt(this,'medical','pregnant',7,true)">
+        <span class="opt-main">I am pregnant or breastfeeding</span>
+        <div class="opt-indicator"></div>
+      </div>
+      <div class="option-card" onclick="selectOpt(this,'medical','accutane',7,true)">
+        <span class="opt-main">I'm currently taking Accutane</span>
+        <div class="opt-indicator"></div>
+      </div>
+      <div class="option-card" onclick="selectOpt(this,'medical','infection',7,true)">
+        <span class="opt-main">Active skin infection in the treatment area</span>
+        <div class="opt-indicator"></div>
+      </div>
+    </div>
+    <div class="step-nav">
+      <button class="btn-back" onclick="goBack(7)">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back
+      </button>
+      <button class="btn-next" id="next7" disabled onclick="nextStep(7)">
+        Continue
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- STEP 8: Experience -->
+  <div class="step" id="step8">
+    <p class="step-q">Have you had laser hair removal before?</p>
+    <p class="step-hint">This helps us tailor your consultation.</p>
+    <div class="options-grid">
+      <div class="option-card" onclick="selectOpt(this,'experience','first_time',8)">
+        <span class="opt-main">No — this would be my first time</span>
+        <div class="opt-indicator"></div>
+      </div>
+      <div class="option-card" onclick="selectOpt(this,'experience','other_clinic',8)">
+        <span class="opt-main">Yes — at a different clinic</span>
+        <div class="opt-indicator"></div>
+      </div>
+      <div class="option-card" onclick="selectOpt(this,'experience','returning',8)">
+        <span class="opt-main">Yes — I've been to Aesthetic Laser Center before</span>
+        <div class="opt-indicator"></div>
+      </div>
+    </div>
+    <div class="step-nav">
+      <button class="btn-back" onclick="goBack(8)">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back
+      </button>
+      <button class="btn-next" id="next8" disabled onclick="nextStep(8)">
+        Continue
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- STEP 9: Timeline -->
+  <div class="step" id="step9">
+    <p class="step-q">When are you looking to get started?</p>
+    <p class="step-hint">No pressure — this helps us match you with availability.</p>
+    <div class="options-grid">
+      <div class="option-card" onclick="selectOpt(this,'timeline','asap',9)">
+        <span class="opt-main">As soon as possible</span>
+        <div class="opt-indicator"></div>
+      </div>
+      <div class="option-card" onclick="selectOpt(this,'timeline','month',9)">
+        <span class="opt-main">Within the next month or two</span>
+        <div class="opt-indicator"></div>
+      </div>
+      <div class="option-card" onclick="selectOpt(this,'timeline','researching',9)">
+        <span class="opt-main">Just researching for now</span>
+        <div class="opt-indicator"></div>
+      </div>
+    </div>
+    <div class="step-nav">
+      <button class="btn-back" onclick="goBack(9)">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back
+      </button>
+      <button class="btn-next" id="next9" disabled onclick="showTeaser()">
+        See My Results
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- DISQUALIFY: Light Hair -->
+  <div class="disq-screen" id="disqLightHair">
+    <div class="disq-tag">Not Quite a Match</div>
+    <h3>Laser Hair Removal May Not Be Effective For You — But We Have Options.</h3>
+    <p>Laser works by targeting dark pigment in the hair follicle. Blonde, red, gray, and white hair doesn't carry enough melanin for the laser to be effective. Aesthetic Laser Center of Seattle offers IPL and other treatments that may be a better fit.</p>
+    <a href="https://alcofseattle.com/ipl" class="btn-outline">Explore IPL Treatments</a>
+    <a href="https://alcofseattle.com/contact" class="btn-outline">Talk to a Specialist</a>
+  </div>
+
+  <!-- DISQUALIFY: Medical -->
+  <div class="disq-screen" id="disqMedical">
+    <div class="disq-tag">Not the Right Timing</div>
+    <h3>This Isn't the Right Moment — But We'll Be Here When You're Ready.</h3>
+    <p>Based on your answers, we'd recommend waiting before starting laser hair removal. When the timing is right, Aesthetic Laser Center of Seattle will walk you through every step.</p>
+    <a href="https://alcofseattle.com/contact" class="btn-outline">Ask a Question</a>
+    <button class="btn-outline" onclick="location.reload()">Retake the Quiz</button>
+  </div>
+
+  <!-- RESULT SCREEN -->
+  <div class="teaser-screen" id="teaserScreen">
+
+    <div class="teaser-header">
+      <div class="teaser-tag">
+        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        Laser Hair Removal Is Right for You
+      </div>
+      <h3>Based on Your Answers,<br><span>You're a Great Fit.</span></h3>
+      <p>Here's what your treatment journey looks like based on the areas you selected.</p>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-row">
+      <div class="stat-box">
+        <span class="stat-num">6–8</span>
+        <span class="stat-lbl">Sessions in a full series</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">4–8</span>
+        <span class="stat-lbl">Weeks between sessions</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">70–90%</span>
+        <span class="stat-lbl">Average hair reduction</span>
+      </div>
+    </div>
+
+    <!-- SELECTED AREAS (no pricing) -->
+    <div style="border:2px solid var(--black);margin-bottom:40px;">
+      <div style="background:var(--light-gray);padding:14px 24px;border-bottom:1px solid var(--mid-gray);">
+        <span style="font-size:10px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--text-gray);">Your Selected Treatment Areas</span>
+      </div>
+      <div id="selectedAreasList" style="padding:0;"></div>
+    </div>
+
+    <!-- WHAT TO EXPECT -->
+    <p class="section-label">What to Expect</p>
+    <div class="expect-list">
+      <div class="expect-item"><span class="expect-num">01</span><span>Most clients complete 6–8 sessions spaced 4–8 weeks apart for full results.</span></div>
+      <div class="expect-item"><span class="expect-num">02</span><span>Sessions are fast — most areas take under 30 minutes per visit.</span></div>
+      <div class="expect-item"><span class="expect-num">03</span><span>Results improve progressively with each session throughout your series.</span></div>
+      <div class="expect-item"><span class="expect-num">04</span><span>Mild redness after treatment is normal and fades within a few hours.</span></div>
+      <div class="expect-item"><span class="expect-num">05</span><span>Your specialist will walk you through everything at your free consultation.</span></div>
+    </div>
+
+    <!-- BOOK CTA -->
+    <div class="cta-block" style="margin-bottom:48px;">
+      <div class="cta-block-img">
+        <img src="lifestyle.jpg" alt="Confident woman" />
+      </div>
+      <div class="cta-block-text">
+        <h4>Book Your Free Consultation</h4>
+        <p>No commitment required. Meet with a specialist and get all your questions answered in person.</p>
+        <a href="https://dashboard.boulevard.io/booking/businesses/b678691c-e665-4512-b793-15851fcbb195/widget#/visit-type" class="btn-accent" target="_blank">
+          Book Now
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- PRICING OPT-IN PROMPT -->
+    <div id="pricingPrompt" style="border-top:2px solid var(--black);padding-top:40px;margin-bottom:0;">
+      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,3vw,36px);letter-spacing:0.02em;color:var(--black);margin-bottom:12px;line-height:1.1;">
+        Would you like to see what people around <span id="zipDisplay" style="color:var(--accent)">your area</span> typically pay for similar treatments?
+      </p>
+      <p style="font-size:14px;font-weight:300;color:var(--text-gray);line-height:1.7;margin-bottom:28px;max-width:480px;">
+        Pricing varies by clinic and treatment area. We'll show you a realistic range based on what's typical near you.
+      </p>
+      <button class="btn-primary" onclick="showPricingGate()">
+        Yes, Show Me Pricing
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+
+    <!-- PRICING GATE (hidden until opt-in) -->
+    <div id="pricingGate" style="display:none;margin-top:40px;animation:fadeUp 0.4s ease forwards;">
+
+      <!-- BLURRED PRICING TABLE -->
+      <div class="pricing-gate-wrap">
+        <div class="pricing-gate-head">
+          <span>Typical Pricing Near <span id="zipDisplay2">You</span> · Full Series</span>
+          <div class="lock-badge" id="lockBadge">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+            Locked
+          </div>
+        </div>
+        <div class="pricing-rows-locked" id="pricingRowsLocked"></div>
+      </div>
+
+      <!-- GATE FORM -->
+      <div class="gate-cta" id="gateCta">
+        <div class="gate-cta-top">
+          <div class="gate-lock-icon">
+            <svg width="18" height="18" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          </div>
+          <div>
+            <h4>Unlock Pricing</h4>
+            <p>Enter your details to reveal typical pricing for your selected areas.</p>
+          </div>
+        </div>
+        <div class="gate-form">
+          <div class="gate-form-row">
+            <div class="gate-input-group">
+              <label>First Name <span style="color:var(--accent)">*</span></label>
+              <input type="text" id="gFirstName" placeholder="Sarah" autocomplete="given-name" oninput="clearErr('errFirstName')" />
+              <div class="field-error" id="errFirstName"></div>
+            </div>
+            <div class="gate-input-group">
+              <label>Last Name <span style="color:var(--accent)">*</span></label>
+              <input type="text" id="gLastName" placeholder="Johnson" autocomplete="family-name" oninput="clearErr('errLastName')" />
+              <div class="field-error" id="errLastName"></div>
+            </div>
+          </div>
+          <div class="gate-input-group">
+            <label>Email Address <span style="color:var(--accent)">*</span></label>
+            <input type="email" id="gEmail" placeholder="sarah@email.com" autocomplete="email" oninput="clearErr('errEmail')" />
+            <div class="field-error" id="errEmail"></div>
+          </div>
+          <div class="gate-input-group">
+            <label>Phone Number <span style="color:var(--text-gray);font-weight:400;font-size:10px;text-transform:none;letter-spacing:0"> — optional</span></label>
+            <input type="tel" id="gPhone" placeholder="(206) 555-0100" autocomplete="tel" oninput="clearErr('errPhone')" />
+            <div class="field-error" id="errPhone"></div>
+          </div>
+          <div class="privacy-row">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Your information is private and will only be shared with a licensed clinic near you. We never sell your data.
+          </div>
+          <button class="btn-unlock" onclick="unlockPricing()">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+            Reveal Pricing
+          </button>
+        </div>
+      </div>
+
+      <!-- POST-UNLOCK (savings + disclaimer) -->
+      <div class="post-unlock" id="postUnlock">
+        <div class="savings-bar" id="savingsBar" style="margin-top:0;border-top:none;">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span id="savingsText"></span>
+        </div>
+        <div class="result-disclaimer">
+          Pricing ranges reflect what people typically pay in the Seattle metro area for a full treatment series. Actual pricing varies by clinic and will be confirmed at your free consultation.
+        </div>
+      </div>
+
+    </div><!-- /pricingGate -->
+
+  </div><!-- /teaser-screen -->
+
+</div><!-- /quiz-wrapper -->
+
+<footer>
+  <div>
+    <div class="footer-brand">Youtano Health</div>
+    <p>Connecting Seattle residents with trusted aesthetic laser clinics.<br>
+    In partnership with <a href="https://alcofseattle.com">Aesthetic Laser Center of Seattle</a>.</p>
+  </div>
+  <div class="footer-right">
+    <p>509 Olive Way, Suite 1407<br>Seattle, Washington 98101<br>
+    <a href="tel:2063229740">206-322-9740</a><br>
+    Mon–Fri 8am–6pm · Sat 8am–5pm</p>
+  </div>
+</footer>
+
+<script>
+  const TOTAL_STEPS = 9;
+  const answers = {
+    zip: '', travel: null, hairColor: null, areas: [],
+    method: null, sun: null, medical: null, experience: null, timeline: null
+  };
+  let pendingDisq = null;
+
+  const AREA_NAMES = {
+    face_neck:'Face & Neck', arms:'Arms', midsection:'Midsection',
+    back:'Back', bikini:'Bikini', legs:'Legs'
+  };
+
+  // Pricing: [low, high] per tier — ±20% of anchored line item
+  const PRICING = {
+    face_neck:   { single:[1100,1650], two:[975,1475],  three:[875,1325]  },
+    arms:        { single:[1375,2050], two:[1225,1850], three:[1100,1650] },
+    midsection:  { single:[1150,1750], two:[1050,1575], three:[925,1400]  },
+    back:        { single:[1650,2475], two:[1475,2225], three:[1325,1975] },
+    bikini:      { single:[975,1450],  two:[875,1300],  three:[775,1150]  },
+    legs:        { single:[2475,3700], two:[2225,3325], three:[1975,2950] },
+  };
+
+  function getTier(n) { return n === 1 ? 'single' : n === 2 ? 'two' : 'three'; }
+
+  function handleZip(val) {
+    answers.zip = val;
+    const valid = val.length === 5 && /^\d{5}$/.test(val) && val.startsWith('98');
+    document.getElementById('next1').disabled = !valid;
+    const err = document.getElementById('zipError');
+    if (val.length === 5 && !valid) {
+      err.textContent = 'Please enter a valid Washington state ZIP code.';
+      err.style.display = 'block';
+    } else if (val.length > 0 && !val.startsWith('98') && val.length < 5) {
+      err.textContent = 'Must be a Washington state ZIP code starting with 98.';
+      err.style.display = 'block';
+    } else {
+      err.style.display = 'none';
+    }
+  }
+
+  function startQuiz() {
+    document.getElementById('quizIntro').style.display = 'none';
+    document.getElementById('step1').classList.add('active');
+    document.getElementById('progressWrap').classList.add('visible');
+    updateProgress(1);
+    scroll();
+  }
+
+  function selectOpt(el, key, val, stepNum, disq=false) {
+    el.closest('.options-grid').querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
+    el.classList.add('selected');
+    answers[key] = val;
+    pendingDisq = disq ? key+'_'+val : null;
+    document.getElementById('next'+stepNum).disabled = false;
+  }
+
+  function toggleArea(el, area, p1, p2, p3) {
+    el.classList.toggle('selected');
+    if (el.classList.contains('selected')) {
+      if (!answers.areas.find(a => a.key === area)) answers.areas.push({ key: area });
+    } else {
+      answers.areas = answers.areas.filter(a => a.key !== area);
+    }
+    document.getElementById('next4').disabled = answers.areas.length === 0;
+  }
+
+  function updateProgress(step) {
+    const pct = Math.round((step / TOTAL_STEPS) * 100);
+    document.getElementById('progressFill').style.width = pct + '%';
+    document.getElementById('stepLabel').textContent = 'Step ' + step + ' of ' + TOTAL_STEPS;
+    document.getElementById('stepPct').textContent = pct + '%';
+  }
+
+  function nextStep(from) {
+    if (pendingDisq) {
+      if (from === 3) { showDisq('disqLightHair'); return; }
+      if (from === 7) { showDisq('disqMedical'); return; }
+    }
+    document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+    const next = from + 1;
+    document.getElementById('step' + next).classList.add('active');
+    updateProgress(next);
+    scroll();
+  }
+
+  function goBack(from) {
+    document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.disq-screen').forEach(s => s.classList.remove('active'));
+    document.getElementById('teaserScreen').classList.remove('active');
+    const target = from - 1;
+    if (target === 0) {
+      document.getElementById('quizIntro').style.display = 'grid';
+      document.getElementById('progressWrap').classList.remove('visible');
+    } else {
+      document.getElementById('step' + target).classList.add('active');
+      updateProgress(target);
+    }
+    scroll();
+  }
+
+  function showDisq(id) {
+    document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.disq-screen').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    document.getElementById('progressWrap').classList.remove('visible');
+    scroll();
+  }
+
+  function showTeaser() {
+    if (pendingDisq) { showDisq('disqMedical'); return; }
+    document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+    document.getElementById('progressWrap').classList.remove('visible');
+
+    // Populate ZIP displays
+    const zip = answers.zip || 'your area';
+    document.getElementById('zipDisplay').textContent = zip;
+    document.getElementById('zipDisplay2').textContent = zip;
+
+    // Populate selected areas list (no pricing)
+    const areaRows = answers.areas.map(a => `
+      <div style="display:flex;align-items:center;gap:12px;padding:14px 24px;border-bottom:1px solid var(--mid-gray);">
+        <svg width="14" height="14" fill="none" stroke="var(--accent)" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+        <span style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;">${AREA_NAMES[a.key]}</span>
+      </div>`).join('');
+    document.getElementById('selectedAreasList').innerHTML = areaRows;
+
+    document.getElementById('teaserScreen').classList.add('active');
+    scroll();
+  }
+
+  function showPricingGate() {
+    document.getElementById('pricingPrompt').style.display = 'none';
+
+    const n = answers.areas.length;
+    const tier = getTier(n);
+    let rows = '';
+    let totalLow = 0, totalHigh = 0;
+    let singleLow = 0, singleHigh = 0;
+
+    answers.areas.forEach(a => {
+      const p = PRICING[a.key][tier];
+      const ps = PRICING[a.key]['single'];
+      totalLow += p[0]; totalHigh += p[1];
+      singleLow += ps[0]; singleHigh += ps[1];
+      rows += `<div class="price-row-locked">
+        <span class="pr-area-name">${AREA_NAMES[a.key]}</span>
+        <span class="pr-blurred" data-low="${p[0]}" data-high="${p[1]}">$${p[0].toLocaleString()}–$${p[1].toLocaleString()}</span>
+      </div>`;
+    });
+
+    const label = n > 1 ? 'Total Estimate' : 'Estimated Range';
+    rows += `<div class="price-row-total">
+      <span class="pr-total-label">${label}</span>
+      <span class="pr-total-value" data-low="${totalLow}" data-high="${totalHigh}">$${totalLow.toLocaleString()}–$${totalHigh.toLocaleString()}</span>
+    </div>`;
+
+    document.getElementById('pricingRowsLocked').innerHTML = rows;
+    window._savingsData = { n, singleLow, singleHigh, totalLow, totalHigh };
+
+    document.getElementById('pricingGate').style.display = 'block';
+    setTimeout(() => {
+      document.getElementById('pricingGate').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  }
+
+  function setErr(id, msg) {
+    const el = document.getElementById(id);
+    el.textContent = msg;
+    el.classList.add('visible');
+    const input = el.previousElementSibling;
+    if (input && input.tagName === 'INPUT') input.classList.add('invalid');
+  }
+
+  function clearErr(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.classList.remove('visible');
+    const input = el.previousElementSibling;
+    if (input && input.tagName === 'INPUT') input.classList.remove('invalid');
+  }
+
+  function unlockPricing() {
+    const first = document.getElementById('gFirstName').value.trim();
+    const last  = document.getElementById('gLastName').value.trim();
+    const email = document.getElementById('gEmail').value.trim();
+    const phone = document.getElementById('gPhone').value.trim();
+
+    let valid = true;
+
+    if (!first) { setErr('errFirstName', 'First name is required.'); valid = false; }
+    else if (first.length < 2) { setErr('errFirstName', 'Please enter a valid first name.'); valid = false; }
+
+    if (!last) { setErr('errLastName', 'Last name is required.'); valid = false; }
+    else if (last.length < 2) { setErr('errLastName', 'Please enter a valid last name.'); valid = false; }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email) { setErr('errEmail', 'Email address is required.'); valid = false; }
+    else if (!emailRegex.test(email)) { setErr('errEmail', 'Please enter a valid email address.'); valid = false; }
+
+    if (phone) {
+      const digits = phone.replace(/\D/g, '');
+      if (digits.length < 10) { setErr('errPhone', 'Please enter a valid 10-digit phone number.'); valid = false; }
+    }
+
+    if (!valid) return;
+
+    const payload = {
+      first_name: first, last_name: last, email, phone,
+      zip: answers.zip, travel: answers.travel,
+      hair_color: answers.hairColor,
+      areas: answers.areas.map(a => AREA_NAMES[a.key]).join(', '),
+      method: answers.method, sun: answers.sun, medical: answers.medical,
+      experience: answers.experience, timeline: answers.timeline,
+      requested_pricing: true,
+      source: 'youtanohealth.com — LHR Quiz',
+      clinic: 'Aesthetic Laser Center of Seattle'
+    };
+
+    fetch('YOUR_MAKE_WEBHOOK_URL_HERE', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).catch(() => {});
+
+    // Reveal prices
+    document.querySelectorAll('.pr-blurred').forEach((el, i) => {
+      setTimeout(() => { el.classList.add('revealed'); }, i * 140);
+    });
+    setTimeout(() => {
+      const total = document.querySelector('.pr-total-value');
+      if (total) total.classList.add('revealed');
+    }, answers.areas.length * 140 + 120);
+
+    // Update lock badge
+    const badge = document.getElementById('lockBadge');
+    badge.innerHTML = `<svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg> Unlocked`;
+    badge.style.background = 'var(--success)';
+
+    document.getElementById('gateCta').style.display = 'none';
+
+    // Show savings + disclaimer after reveal
+    setTimeout(() => {
+      const d = window._savingsData;
+      if (d && d.n >= 2) {
+        const savedLow = d.singleLow - d.totalLow;
+        const savedHigh = d.singleHigh - d.totalHigh;
+        const bar = document.getElementById('savingsBar');
+        bar.style.display = 'flex';
+        document.getElementById('savingsText').textContent =
+          `Treating ${d.n} areas together saves you approximately $${savedLow.toLocaleString()}–$${savedHigh.toLocaleString()} compared to booking each area separately.`;
+      }
+      document.getElementById('postUnlock').classList.add('visible');
+    }, answers.areas.length * 140 + 400);
+  }
+
+  function scroll() {
+    document.querySelector('.quiz-wrapper').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+</script>
+</body>
+</html>
