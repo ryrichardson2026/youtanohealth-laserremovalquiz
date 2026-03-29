@@ -1353,12 +1353,148 @@
 
   <!-- DISQUALIFY: Medical -->
   <div class="disq-screen" id="disqMedical">
-    <div class="disq-tag">Not the Right Timing</div>
-    <h3>This Isn't the Right Moment — But We'll Be Here When You're Ready.</h3>
-    <p>Based on your answers, we'd recommend waiting before starting laser hair removal. When the timing is right, Aesthetic Laser Center of Seattle will walk you through every step.</p>
-    <a href="https://alcofseattle.com/contact" class="btn-outline">Ask a Question</a>
-    <button class="btn-outline" onclick="location.reload()">Retake the Quiz</button>
-  </div>
+
+    <!-- SITUATION-SPECIFIC HEADER (populated by JS) -->
+    <div class="disq-tag" id="disqTag">Not the Right Timing</div>
+    <h3 id="disqHeading" style="font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,52px);letter-spacing:0.02em;line-height:1.05;color:var(--black);margin-bottom:20px;max-width:640px;">Now May Not Be the Right Time — But That Doesn't Mean Never.</h3>
+    <p id="disqReason" style="font-size:15px;font-weight:300;color:var(--text-gray);line-height:1.8;max-width:560px;margin-bottom:12px;"></p>
+    <p style="font-size:15px;font-weight:300;color:var(--text-gray);line-height:1.8;max-width:560px;margin-bottom:40px;">We recommend speaking with a licensed provider who can review your specific situation and let you know when the timing is right. In the meantime, here's what laser hair removal typically looks like — so you're ready when the time comes.</p>
+
+    <!-- DIVIDER -->
+    <div style="border-top:2px solid var(--black);margin-bottom:48px;"></div>
+
+    <!-- TYPICAL TREATMENTS -->
+    <p class="section-label">Typical Treatment Overview</p>
+    <div class="stats-row" style="margin-bottom:40px;">
+      <div class="stat-box">
+        <span class="stat-num">6–8</span>
+        <span class="stat-lbl">Sessions in a full series</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">4–8</span>
+        <span class="stat-lbl">Weeks between sessions</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">70–90%</span>
+        <span class="stat-lbl">Average hair reduction</span>
+      </div>
+    </div>
+
+    <!-- SELECTED AREAS -->
+    <div style="border:2px solid var(--black);margin-bottom:40px;">
+      <div style="background:var(--light-gray);padding:14px 24px;border-bottom:1px solid var(--mid-gray);">
+        <span style="font-size:10px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--text-gray);">Areas You Selected</span>
+      </div>
+      <div id="disqAreasList"></div>
+    </div>
+
+    <!-- WHAT TO EXPECT -->
+    <p class="section-label">What to Expect When You're Ready</p>
+    <div class="expect-list" style="margin-bottom:48px;">
+      <div class="expect-item"><span class="expect-num">01</span><span>Most clients complete 6–8 sessions spaced 4–8 weeks apart for full results.</span></div>
+      <div class="expect-item"><span class="expect-num">02</span><span>Sessions are fast — most areas take under 30 minutes per visit.</span></div>
+      <div class="expect-item"><span class="expect-num">03</span><span>Results improve progressively with each session throughout your series.</span></div>
+      <div class="expect-item"><span class="expect-num">04</span><span>Mild redness after treatment is normal and fades within a few hours.</span></div>
+      <div class="expect-item"><span class="expect-num">05</span><span>A licensed provider will walk you through everything at your consultation.</span></div>
+    </div>
+
+    <!-- SPECIALIST CTA -->
+    <div style="background:var(--black);padding:40px;margin-bottom:48px;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;">
+      <div>
+        <p style="font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:0.02em;color:var(--white);line-height:1.05;margin-bottom:10px;">Speak With a Licensed Provider</p>
+        <p style="font-size:13px;font-weight:300;color:rgba(255,255,255,0.6);line-height:1.7;">A provider can review your specific situation, answer your questions, and let you know exactly when you'll be ready to start.</p>
+      </div>
+      <div>
+        <a href="https://alcofseattle.com/contact" class="btn-accent" style="width:100%;justify-content:center;">
+          Contact a Specialist
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- PRICING PROMPT -->
+    <div style="border-top:2px solid var(--black);padding-top:40px;margin-bottom:0;">
+      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,3vw,36px);letter-spacing:0.02em;color:var(--black);margin-bottom:12px;line-height:1.1;">
+        Would you like to see what people around <span id="disqZipDisplay" style="color:var(--accent)">your area</span> typically pay for similar treatments?
+      </p>
+      <p style="font-size:14px;font-weight:300;color:var(--text-gray);line-height:1.7;margin-bottom:28px;max-width:480px;">
+        Knowing the numbers ahead of time means you'll be ready to move quickly when the timing is right.
+      </p>
+      <button class="btn-primary" onclick="showDisqPricingGate()">
+        Yes, Show Me Pricing
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+
+    <!-- PRICING GATE (same mechanic) -->
+    <div id="disqPricingGate" style="display:none;margin-top:40px;animation:fadeUp 0.4s ease forwards;">
+      <div class="pricing-gate-wrap">
+        <div class="pricing-gate-head">
+          <span>Typical Pricing Near <span id="disqZipDisplay2">You</span> · Full Series</span>
+          <div class="lock-badge" id="disqLockBadge">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+            Locked
+          </div>
+        </div>
+        <div id="disqPricingRows"></div>
+      </div>
+
+      <div class="gate-cta" id="disqGateCta">
+        <div class="gate-cta-top">
+          <div class="gate-lock-icon">
+            <svg width="18" height="18" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          </div>
+          <div>
+            <h4>Unlock Pricing</h4>
+            <p>Enter your details to reveal typical pricing for your selected areas.</p>
+          </div>
+        </div>
+        <div class="gate-form">
+          <div class="gate-form-row">
+            <div class="gate-input-group">
+              <label>First Name <span style="color:var(--accent)">*</span></label>
+              <input type="text" id="dFirstName" placeholder="Sarah" autocomplete="given-name" oninput="clearErr('derrFirstName')" />
+              <div class="field-error" id="derrFirstName"></div>
+            </div>
+            <div class="gate-input-group">
+              <label>Last Name <span style="color:var(--accent)">*</span></label>
+              <input type="text" id="dLastName" placeholder="Johnson" autocomplete="family-name" oninput="clearErr('derrLastName')" />
+              <div class="field-error" id="derrLastName"></div>
+            </div>
+          </div>
+          <div class="gate-input-group">
+            <label>Email Address <span style="color:var(--accent)">*</span></label>
+            <input type="email" id="dEmail" placeholder="sarah@email.com" autocomplete="email" oninput="clearErr('derrEmail')" />
+            <div class="field-error" id="derrEmail"></div>
+          </div>
+          <div class="gate-input-group">
+            <label>Phone Number <span style="color:var(--text-gray);font-weight:400;font-size:10px;text-transform:none;letter-spacing:0"> — optional</span></label>
+            <input type="tel" id="dPhone" placeholder="(206) 555-0100" autocomplete="tel" oninput="clearErr('derrPhone')" />
+            <div class="field-error" id="derrPhone"></div>
+          </div>
+          <div class="privacy-row">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Your information is private and will only be shared with a licensed provider near you. We never sell your data.
+          </div>
+          <button class="btn-unlock" onclick="unlockDisqPricing()">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+            Reveal Pricing
+          </button>
+        </div>
+      </div>
+
+      <div class="post-unlock" id="disqPostUnlock">
+        <div class="savings-bar" id="disqSavingsBar" style="margin-top:0;border-top:none;">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span id="disqSavingsText"></span>
+        </div>
+        <div class="result-disclaimer">
+          Pricing ranges reflect what people typically pay in the Seattle metro area for a full treatment series. Actual pricing varies by clinic and will be confirmed at your consultation.
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /disqMedical -->
 
   <!-- RESULT SCREEN -->
   <div class="teaser-screen" id="teaserScreen">
@@ -1631,7 +1767,158 @@
     document.querySelectorAll('.disq-screen').forEach(s => s.classList.remove('active'));
     document.getElementById(id).classList.add('active');
     document.getElementById('progressWrap').classList.remove('visible');
+
+    // Populate medical disq with situation-specific content
+    if (id === 'disqMedical') {
+      const reasons = {
+        pregnant: {
+          tag: 'Timing Note',
+          heading: 'Laser Hair Removal Isn\'t Recommended During Pregnancy or While Breastfeeding.',
+          reason: 'This is a precautionary recommendation — not a permanent barrier. Hormonal changes during pregnancy can also affect hair growth patterns, so most providers recommend waiting until after you\'ve finished breastfeeding to begin treatment for the best results.'
+        },
+        accutane: {
+          tag: 'Timing Note',
+          heading: 'Laser Treatment Should Wait Until After Your Accutane Course Is Complete.',
+          reason: 'Accutane significantly increases skin sensitivity to light and heat, which raises the risk of burns and adverse reactions during laser treatment. Most licensed providers recommend waiting 6–9 months after your last dose before beginning a laser series.'
+        },
+        infection: {
+          tag: 'Timing Note',
+          heading: 'Active Skin Conditions in the Treatment Area Need to Resolve First.',
+          reason: 'Treating skin that has an active infection or open lesions carries a risk of spreading bacteria or worsening irritation. Once the area has fully healed, you\'ll be a strong candidate — this is typically a short-term hold, not a long-term barrier.'
+        }
+      };
+
+      const val = answers.medical;
+      const r = reasons[val] || reasons['infection'];
+      document.getElementById('disqTag').textContent = r.tag;
+      document.getElementById('disqHeading').textContent = r.heading;
+      document.getElementById('disqReason').textContent = r.reason;
+
+      // Populate ZIP
+      const zip = answers.zip || 'your area';
+      document.getElementById('disqZipDisplay').textContent = zip;
+      document.getElementById('disqZipDisplay2').textContent = zip;
+
+      // Populate selected areas
+      const areaRows = answers.areas.map(a => `
+        <div style="display:flex;align-items:center;gap:12px;padding:14px 24px;border-bottom:1px solid var(--mid-gray);">
+          <svg width="14" height="14" fill="none" stroke="var(--accent)" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+          <span style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;">${AREA_NAMES[a.key]}</span>
+        </div>`).join('');
+      document.getElementById('disqAreasList').innerHTML = areaRows || '<div style="padding:16px 24px;font-size:14px;color:var(--text-gray);">No areas selected</div>';
+    }
+
     scroll();
+  }
+
+  function showDisqPricingGate() {
+    document.querySelector('#disqMedical [onclick="showDisqPricingGate()"]').closest('div').style.display = 'none';
+
+    const n = answers.areas.length;
+    const tier = getTier(n);
+    let rows = '';
+    let totalLow = 0, totalHigh = 0;
+    let singleLow = 0, singleHigh = 0;
+
+    answers.areas.forEach(a => {
+      const p = PRICING[a.key][tier];
+      const ps = PRICING[a.key]['single'];
+      totalLow += p[0]; totalHigh += p[1];
+      singleLow += ps[0]; singleHigh += ps[1];
+      rows += `<div class="price-row-locked">
+        <span class="pr-area-name">${AREA_NAMES[a.key]}</span>
+        <span class="pr-blurred disq-blurred">$${p[0].toLocaleString()}–$${p[1].toLocaleString()}</span>
+      </div>`;
+    });
+
+    const label = n > 1 ? 'Total Estimate' : 'Estimated Range';
+    rows += `<div class="price-row-total">
+      <span class="pr-total-label">${label}</span>
+      <span class="pr-total-value disq-total">$${totalLow.toLocaleString()}–$${totalHigh.toLocaleString()}</span>
+    </div>`;
+
+    document.getElementById('disqPricingRows').innerHTML = rows;
+    window._disqSavingsData = { n, singleLow, singleHigh, totalLow, totalHigh };
+
+    document.getElementById('disqPricingGate').style.display = 'block';
+    setTimeout(() => {
+      document.getElementById('disqPricingGate').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  }
+
+  function unlockDisqPricing() {
+    const first = document.getElementById('dFirstName').value.trim();
+    const last  = document.getElementById('dLastName').value.trim();
+    const email = document.getElementById('dEmail').value.trim();
+    const phone = document.getElementById('dPhone').value.trim();
+
+    let valid = true;
+
+    if (!first) { setErr('derrFirstName', 'First name is required.'); valid = false; }
+    else if (first.length < 2) { setErr('derrFirstName', 'Please enter a valid first name.'); valid = false; }
+
+    if (!last) { setErr('derrLastName', 'Last name is required.'); valid = false; }
+    else if (last.length < 2) { setErr('derrLastName', 'Please enter a valid last name.'); valid = false; }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email) { setErr('derrEmail', 'Email address is required.'); valid = false; }
+    else if (!emailRegex.test(email)) { setErr('derrEmail', 'Please enter a valid email address.'); valid = false; }
+
+    if (phone) {
+      const digits = phone.replace(/\D/g, '');
+      if (digits.length < 10) { setErr('derrPhone', 'Please enter a valid 10-digit phone number.'); valid = false; }
+    }
+
+    if (!valid) return;
+
+    const payload = {
+      first_name: first, last_name: last, email, phone,
+      zip: answers.zip, travel: answers.travel,
+      hair_color: answers.hairColor,
+      areas: answers.areas.map(a => AREA_NAMES[a.key]).join(', '),
+      method: answers.method, sun: answers.sun,
+      medical: answers.medical,
+      experience: answers.experience, timeline: answers.timeline,
+      disqualified: true, disqualify_reason: answers.medical,
+      requested_pricing: true,
+      source: 'youtanohealth.com — LHR Quiz (timing hold)',
+      clinic: 'Aesthetic Laser Center of Seattle'
+    };
+
+    fetch('YOUR_MAKE_WEBHOOK_URL_HERE', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).catch(() => {});
+
+    // Reveal blurred prices
+    document.querySelectorAll('.disq-blurred').forEach((el, i) => {
+      setTimeout(() => { el.classList.add('revealed'); }, i * 140);
+    });
+    setTimeout(() => {
+      const total = document.querySelector('.disq-total');
+      if (total) total.classList.add('revealed');
+    }, answers.areas.length * 140 + 120);
+
+    // Update lock badge
+    const badge = document.getElementById('disqLockBadge');
+    badge.innerHTML = `<svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg> Unlocked`;
+    badge.style.background = 'var(--success)';
+
+    document.getElementById('disqGateCta').style.display = 'none';
+
+    setTimeout(() => {
+      const d = window._disqSavingsData;
+      if (d && d.n >= 2) {
+        const savedLow = d.singleLow - d.totalLow;
+        const savedHigh = d.singleHigh - d.totalHigh;
+        const bar = document.getElementById('disqSavingsBar');
+        bar.style.display = 'flex';
+        document.getElementById('disqSavingsText').textContent =
+          `Treating ${d.n} areas together saves you approximately $${savedLow.toLocaleString()}–$${savedHigh.toLocaleString()} compared to booking each area separately.`;
+      }
+      document.getElementById('disqPostUnlock').classList.add('visible');
+    }, answers.areas.length * 140 + 400);
   }
 
   function showTeaser() {
